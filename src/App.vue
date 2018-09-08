@@ -1,28 +1,25 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <md-app md-waterfall md-mode="reveal">
+    <md-app-toolbar class="md-primary">
+      <a class="md-title" href="/"><img class="logo" src="./assets/logo.png" />REaL</a>
+    </md-app-toolbar>
+    <md-app-content>
+      <router-view/>
+    </md-app-content>
+  </md-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+  name: 'App',
+};
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+.md-app {
+  min-height: 100vh;
+}
+.logo {
+  width: 50px;
 }
 </style>
